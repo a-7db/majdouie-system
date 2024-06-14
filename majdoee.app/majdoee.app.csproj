@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15231EE7-98F4-4F50-947E-F5BDBAEFFF48}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>majdoee.app</RootNamespace>
+    <AssemblyName>majdoee.app</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB.cs" />
+    <Compile Include="DeveloperDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeveloperDetails.Designer.cs">
+      <DependentUpon>DeveloperDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhaseHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruckForm.Designer.cs">
+      <DependentUpon>TruckForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DeveloperDetails.resx">
+      <DependentUpon>DeveloperDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruckForm.resx">
+      <DependentUpon>TruckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\materials %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copyright-Symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a7.db.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\حقوق الصور.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-copyright-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contact-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-call-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-linkedin-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Planny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Planny1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copyright-Symbol1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-call-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contact-961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-copyright-261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-linkedin-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Planny2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\materials %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck %282%2911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Planny3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
